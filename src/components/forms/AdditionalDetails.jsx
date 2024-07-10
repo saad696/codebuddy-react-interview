@@ -26,6 +26,9 @@ const AdditionalDetails = () => {
   const onSubmit = async () => {
     // setLoading(true);
     try {
+      // checking first if additional details form is valid or not
+      await additionalDetailsForm.validateFields();
+
       // getting step one data and checking if it exists
       const stepOneData = JSON.parse(localStorage.getItem(formTypes.STEP_ONE));
 
@@ -63,7 +66,7 @@ const AdditionalDetails = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      message.error("Something went wrong, please try again later.");
+      message.error("Please fill the form fields or please try again later.");
     }
   };
 

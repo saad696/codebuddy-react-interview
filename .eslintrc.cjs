@@ -35,5 +35,6 @@ module.exports = {
     quotes: ["error", "double"],
     semi: ["error", "always"],
     "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+    "react/prop-types": 0,
   },
 };
